@@ -1,48 +1,117 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
 
-/* Card */
-.card {
-    background: white;
-    width: 300px;
-    margin: 80px auto;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+        /* Step 1: Navigation Menu */
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #333;
+            padding: 10px;
+        }
 
-/* Image */
-.card img {
-    width: 90px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
+        nav button {
+            color: white;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-/* Name */
-.card h1 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-}
+        /* Step 2: Card Layout */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
 
-/* Text */
-.card p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
+        /* Card */
+        .card {
+            background: white;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-/* Highlight role */
-.card p:first-of-type {
-    color: #007bff;
-    font-weight: bold;
-}
+        /* Step 3: Image Fix */
+        .card img {
+            /* width: 1000px; */ /* old incorrect code */
+            max-width: 100%;
+            width: 90px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
-/* Button spacing */
-button {
-    margin-right: 15px;
-}
+        /* Name */
+        .card h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Text */
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Highlight role */
+        .card p:first-of-type {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Button spacing */
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <button>Home</button>
+        <button>About</button>
+        <button>Contact</button>
+    </nav>
+
+    <!-- Cards -->
+    <div class="content-wrapper">
+        
+        <div class="card">
+            <img src="https://via.placeholder.com/90" alt="profile">
+            <h1>Your Name</h1>
+            <p>Web Developer</p>
+            <p>This is a short introduction about yourself.</p>
+            <button>Follow</button>
+            <button>Message</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/90" alt="profile">
+            <h1>Second Card</h1>
+            <p>Designer</p>
+            <p>This is another card to practice Flexbox layout.</p>
+            <button>Follow</button>
+            <button>Message</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
